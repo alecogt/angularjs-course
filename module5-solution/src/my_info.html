@@ -1,0 +1,35 @@
+<div class="container">
+  <h3>My Info</h3>
+  <div ng-if="myinfo.favorite">
+	  <div class="row">
+		  <span class="col-md-2 strong">First name</span><span class="col-md-3">{{ myinfo.first_name }}</span>
+	  </div>
+	  <div class="row">
+		  <span class="col-md-2 strong">Last name</span><span class="col-md-3">{{ myinfo.last_name }}</span>
+	  </div>
+	  <div class="row">
+		  <span class="col-md-2 strong">Email</span><span class="col-md-3">{{ myinfo.email }}</span>
+	  </div>
+	  <div class="row">
+		  <span class="col-md-2 strong">Phone</span><span class="col-md-3">{{ myinfo.phone }}</span>
+	  </div>
+	  <div class="row">
+		  <h3 class="col-md-12 strong">Favorite dish</h3>
+		  <span class="col-md-1 strong">Number</span><span class="col-md-1">{{ myinfo.favorite }}</span>
+		  <span class="col-md-1 strong">Title</span><span class="col-md-3">{{ myinfo.title }}</span>
+		  <span class="col-md-2 strong">Description</span><span class="col-md-4">{{ myinfo.description }}</span>
+	  </div>
+	  <div class="row">
+	  	<div class="col-md-12">
+	  		<img ng-src="https://aleco-course5.herokuapp.com/images/{{myinfo.favorite}}.jpg" />
+	  	</div>
+	  </div>
+  </div>
+  <div ng-if="!myinfo.favorite">
+  	  <div class="row">
+  	  	<p class="col-md-12">
+  	  		Not Signed Up Yet. <a ui-sref="sign_up">Sign up Now!</a>
+  	  	</p>
+  	  </div>
+  </div>
+</div>
